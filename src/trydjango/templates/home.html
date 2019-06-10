@@ -1,2 +1,7 @@
-<h1>Home View</h1>
-<p>This is a Template</p>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Home View</h1>
+    User: {{ request.user.is_authenticated }}
+    Is Authenticated: {{ request.user.is_authenticated }}
+    <p>This is a Template</p>
+{% endblock %}
