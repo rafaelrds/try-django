@@ -8,7 +8,13 @@
 
 <ul>
 {% for item in my_list %}
-    <li>{{ forloop.counter }} - {{ item }}</li>
+    {% if item == 3 %}
+        <li>{{ forloop.counter }} - {{ item | add:22 }}</li>
+    {% elif item == "fibonacci" %}
+        <li>This is not the network</li>
+    {% else %}
+        <li>{{ forloop.counter}} - {{ item }}</li>
+    {% endif %}
 {% endfor %}
 </ul>
 
